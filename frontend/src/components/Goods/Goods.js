@@ -4,7 +4,7 @@ import './Goods.css';
 
 
 const Goods = (props) => {
-    console.log(props.product.name);
+   // console.log(props);
     const {image, name, price} = props.product;
     return (
        
@@ -20,7 +20,9 @@ const Goods = (props) => {
             </strong>
             </div>
             <Card.Text> {price} TK</Card.Text>
-            <button className="buy-button"> Buy me</button>
+            <button className="buy-button"
+            onClick ={()=>props.handleAddProductT(props.product)}
+            > Buy me</button>
         </Card>
         
     );

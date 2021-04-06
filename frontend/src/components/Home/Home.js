@@ -5,14 +5,20 @@ import Goods from '../Goods/Goods';
 import './Home.css';
 
 const Home = () => {
-    console.log(products);
+  //  console.log(products);
+    const handleAddProduct= (product)=>{
+        console.log('YES!!!YES!!Product added',product);
+    }
     return (
         <div className="home-container">
             <Row>
             {
                 products.map((item)=>(
                     <Col sm={12} md={6} lg={4} xl={3}>
-                         <Goods product = {item}> </Goods> 
+                         <Goods 
+                         handleAddProductT={handleAddProduct}
+                         product = {item}> 
+                         </Goods> 
                     </Col>
                 ))}
             </Row>
