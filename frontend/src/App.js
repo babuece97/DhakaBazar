@@ -2,15 +2,45 @@ import './App.css';
 import {Container, Row, Col} from 'react-bootstrap';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Order from './components/Order/Order';
+import Admin from './components/Admin/Admin'
+import Login from './components/Login/Login'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
     <div>
-     <Header></Header>
-     <Container>
-       <h1> Welcome to Dhaka Bazar</h1>
+        <Container>
+       <h1> Welcome to Subhah's world</h1>
        </Container>
      <Home></Home>
+       <Header></Header>
+      <Router>
+         <Switch>
+           <Route path="/home">
+             <Home></Home>
+           </Route>
+           <Route path="/order">
+              <Order></Order>
+            </Route>
+            <Route path="/admin">
+              <Admin></Admin>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+
+
+         </Switch>
+      </Router>
+    
+   
     
     </div>
   );
