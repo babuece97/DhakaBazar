@@ -7,6 +7,7 @@ import Admin from './components/Admin/Admin';
 import Login from './components/Login/Login';
 import Review from './components/Review/Review';
 import NotFound from './components/NotFound/NotFound';
+import GoodsDetail from './components/GoodsDetail/GoodsDetail';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route exact path='/'>
               <Home></Home>
+            </Route>
+            <Route path='/item/:productID'>
+              <GoodsDetail></GoodsDetail>
             </Route>
             <Route path='*'>
               <NotFound></NotFound>
