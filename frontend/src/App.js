@@ -3,8 +3,9 @@ import {Container, Row, Col} from 'react-bootstrap';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Order from './components/Order/Order';
-import Admin from './components/Admin/Admin'
-import Login from './components/Login/Login'
+import Admin from './components/Admin/Admin';
+import Login from './components/Login/Login';
+import Review from './components/Review/Review';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,16 +16,17 @@ import {
 
 function App() {
   return (
-    <div>
+    <>
         <Container>
        <h1> Welcome to Subhah's world</h1>
        </Container>
-     <Home></Home>
        <Header></Header>
+     <Home></Home>
+       
       <Router>
          <Switch>
-           <Route path="/home">
-             <Home></Home>
+           <Route path="/review">
+             <Review></Review>
            </Route>
            <Route path="/order">
               <Order></Order>
@@ -35,14 +37,10 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-
-
          </Switch>
       </Router>
     
-   
-    
-    </div>
+    </>
   );
 }
 
