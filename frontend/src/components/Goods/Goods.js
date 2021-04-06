@@ -20,7 +20,7 @@ const Goods = (props) => {
             </strong>
             </div>
             <Card.Text> {price} TK</Card.Text>
-            <button> Buy me</button>
+            <button className="buy-button"> Buy me</button>
         </Card>
         
     );
