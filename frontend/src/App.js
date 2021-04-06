@@ -20,11 +20,17 @@ function App() {
         <Container>
        <h1> Welcome to Subhah's world</h1>
        </Container>
-       <Header></Header>
-     <Home></Home>
        
+       <div>
+       <Header></Header>
+         
       <Router>
+        
          <Switch>
+         <Route path="/home">
+             <Home></Home>
+           </Route>
+
            <Route path="/review">
              <Review></Review>
            </Route>
@@ -37,9 +43,12 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/">
+              <Home></Home>
+            </Route>
          </Switch>
       </Router>
-    
+      </div>
     </>
   );
 }
