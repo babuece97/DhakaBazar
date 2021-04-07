@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Goods.css';
 
 const Goods = (props) => {
-  console.log(props.product._id);
+  console.log(props);
   const { image, name, price, _id } = props.product;
   return (
     <Card className='my-5 p-3 rounded'>
@@ -17,13 +17,15 @@ const Goods = (props) => {
         </strong>
       </div>
       <Card.Text> {price} TK</Card.Text>
-      <button
-        className='buy-button'
-        onClick={() => props.handleAddProductT(props.product)}
-      >
-        {' '}
-        Buy me
-      </button>
+      {props.showBuyMe && (
+        <button
+          className='buy-button'
+          onClick={() => props.handleAddProductT(props.product)}
+        >
+          {' '}
+          Buy me
+        </button>
+      )}
     </Card>
   );
 };
