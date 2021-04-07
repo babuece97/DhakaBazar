@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import products from '../../products';
 import Goods from '../Goods/Goods';
-//this is hook that will be called with parameter
+//this is hookuse Params{} that will be called with parameter
 const GoodsDetail = () => {
   const { productKey } = useParams();
   const productt = products.find((prd) => prd._id === productKey);
